@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao CSS</title>
+    <style>
+        /* comentário de CSS */
+        /* ALT + SHIFT + A */
+        /* Iremos agora criar uma regra CSS
+        Ela será composta por seletor { (chves) ; (dois pontos) e o valor} */
+
+        /* entra apenas no seletor exemplo para parágrafo p */
+        p {color:brown;}
+
+        h2 {
+            text-align: center;
+            color: mediumvioletred;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+            /* Versão detalhada */
+            border-top-width: 4px;
+            border-top-style:solid;
+            border-color: blue;
+            border-bottom-style: 4px;
+            border-top-style: double;
+            border-color: brown;
+
+            /* Versão abreviada */
+            border-top: 2px solid red;
+            border-bottom: 4px double blue;
+
+            
+
+            /* Exercícios 
+            
+            1 Crie uma regra CSS para a tag body e nela altere a cor do pano de fundo
+            2 Crie uma regra CSS para a tag h1 e nela altere:border: border: 
+                    -cor do pano de fundo
+                    -cor do texto
+                    -fonte impact 
+                    -alinhamento centralizado
+                    -cantos arredondados
+            */
+        }
+
+        body {
+            background-color: rgb(218, 218, 181);
+        }
+
+        h1 {
+            background-color: rgb(235, 214, 228);
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: rgb(57, 7, 104);
+            text-align: center;
+            border-radius: 20px;
+            text-decoration-color: blue;
+            letter-spacing: 6;
+            font-weight: normal;
+        }
+
+    </style>
+</head>
+
+<body>
+        <h1>Trabalhando com CSS e HTML</h1>
+        <hr>
+
+        <h2>HTML</h2>
+        <p style="color:blueviolet; text-align: right;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatibus!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatibus!</p>
+
+        <h2>CSS</h2>
+        <p style="color: blueviolet; text-align: right;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, provident.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, provident.</p>
+
+        <h2>JS</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, et! Aspernatur eum vitae, ipsam ipsa magni, commodi perferendis deleniti recusandae et qui non error esse mollitia labore incidunt perspiciatis corrupti!</p>
+       
+</body>
+</html>

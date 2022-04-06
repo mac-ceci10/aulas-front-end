@@ -1,0 +1,9 @@
+*, *::after, *::before {
+    box-sizing: border-box;  
+}
+
+body {
+    background-image: url(/exercicio-estilos16-03-22/img/img_tec.jpg);
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

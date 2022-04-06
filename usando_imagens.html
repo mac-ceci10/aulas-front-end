@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando Imagens</title>
+</head>
+<body>
+    <h1>Trabalhando com imagens</h1>
+    <hr>
+    <p>Formatos mais comuns</p>
+    <!-- Atalho para criar uma lista não ordenada com 4 itens 
+    ul>li*4 -->
+    <ul>
+        <li>JPEG/JPG</li>
+        <li>PNG</li>
+        <li>GIF</li>
+        <li>SVG</li>
+    </ul>
+    <h2>Exemplos:</h2>
+    <!-- 
+        Tag <img>
+        Atributos: 
+        
+            src="" fonte / origem / caminho -> source (caminho/origem)
+            alt="" alternative text (texto alternativo) ferramentas de buscas
+        esta tag não tem fechamento (alt é um atributo de acessibilidade) não precisa escrever "imagem" porque a ferramenta de busca já identifica a TAG
+    -->
+    <!-- CONTROL + ESPAÇO (sugestões de pastas e arquivos) é um atalho para trazer a pasta caso ela não apareça
+    -->
+
+    <img src="imagens/pink-floyd.jpg" alt="integrantes da banda pink-floyd acenando para o público">
+
+    <p>
+        <img src="imagens/stonehenge.jpg" alt="Ruínas antigas do Stonehenge com por-do-sol">
+    </p>
+
+    <!-- figcaption é diferente de alt - FIGCAPTION é uma legenda e o ALT é um recurso de descrição. Não colocar as mesmas informações.  -->
+   
+    <figure>
+        <figcaption>Legenda antes - Foto do por-do-sol retirada durante as férias no stonehenge no ano de 2010</figcaption>
+        <img src="imagens/stonehenge.jpg" alt="Ruínas antigas do Stonehenge com por-do-sol">
+        <figcaption>Legenda depois - Foto do por-do-sol retirada durante as férias no stonehenge no ano de 2010</figcaption>
+    </figure>
+
+    <figure>
+        <img src="imagens/logo-html5.png" alt="imagem do logo html5">
+        <img src="imagens/logo-css3.gif" alt="imagem do logo logo-css3">
+        <img src="imagens/logo-javascript.gif" alt="imagem do logo logo-javascript">
+        <figcaption>Tecnologias do mundo front-end</figcaption>
+    </figure>
+    <!-- Elementos in line (TAG IMG) quer dizer que a tendência é trazer em linha -->
+
+    <!-- GIF ANIMADO -->
+    <img src="imagens/computer.gif" alt="animação usuário deseperado batendo a cabeça no computador">
+
+    <hr>
+    <!-- BITMAP -->
+    <img src="imagens/black-cat.png" alt="">
+
+    <hr>
+    <!-- VETOR -->
+    <img src="imagens/black-cat.svg" alt="">
+
+    
+
+
+</body>
+</html>

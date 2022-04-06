@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout</title>
+
+<!-- /* Regras de USO GERAL para CSS */ 
+Aqui que você configura o padrão, mídias query só irão entrar para fazer os ajustes do designer responsivo
+Neste momento não usamos as mídias query-->
+
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+/* Sempre declarar o font-size do html mesmo sabendo o valor padrão que é 16px como referência.
+com essa informação declarada, já idenfifica que o projeto terá medida REM. */
+
+html {font-size: 15px;}    
+
+#container {
+    box-shadow: black 0 0 5px;
+    padding: 5px;
+}
+
+header {
+    background-color: aqua;
+    text-align: center;
+    height: 100px;
+}
+
+/* CSS reset:remoção de valores padrão */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 { font-size: 2rem;}
+h2 {font-size: 1.2rem;}
+p {font-size: 1.1rem;}
+
+
+nav {background-color: rgb(255, 0, 0);}
+
+/* pegou todos de uma só vez */
+article {padding: 20px;}
+
+/* pega cada coluna individual */
+#coluna1 {
+    background-color: greenyellow;
+}
+
+/* pega cada coluna individual */
+#coluna2 {
+    background-color: rgb(255, 147, 47);
+}
+
+/* pega cada coluna individual */
+#coluna3 {
+    background-color: rgb(255, 47, 144);
+}
+
+footer{
+    background-color: blueviolet;
+}
+
+/* Regras para Desiger Responsive */
+/* 1ª Media Query: Telas a partir de 700px de largura */
+
+/*
+Mudança com QUERY
+
+@media screen and (min-width: 200px) {
+    h1 {color:brown}
+    header {background-color:  yellow;}
+}
+
+@media screen and (min-width: 300px) {
+    h1 {color:rgb(18, 84, 100)}
+    header {background-color:  rgb(8, 15, 27);}
+}
+
+@media screen and (min-width: 400px) {
+    h1 {color:rgb(100, 18, 86)}
+    header {background-color:  rgb(245, 241, 27);}
+} */
+
+@media screen and (min-width: 700px) {
+    html {font-size: 18px;}
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav {width: 50%}
+
+    main {
+        display: flex;
+        flex-wrap: wrap; 
+
+        /* flex-wrap quebra linha
+        precisa habilitar para dar uma quebra
+        e em seguida (flex aceita as quebras)
+
+        Sem ele fica tudo em coluna (lado a lado)
+        */       
+    }
+
+    #coluna1, #coluna2 {
+        width: 50%;
+        /* justify-content: space-evenly; 
+        não faz efeito se estiver sendo usado todo o 100% do espaço.
+       Precisa diminuir para 45% por exemplo
+        */
+    }
+}
+
+@media screen and (min-width: 822px) {
+    html {font-size: 20px;}
+   
+    #coluna1, #coluna2, #coluna3{
+        width: 33.33%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /* versão 2:border: usando seletor TAG 
+    (vale para todos os artigos)
+    article {width: 33.33%}; */
+
+    #container {
+        max-width: 1000px;
+        margin: auto;
+    }
+}
+
+</style>
+
+</head>
+<body>
+    
+<!-- Vamos criar um layout responsivo do zero -->
+<!-- CABEÇALHO -->
+<div id="container">   
+    <header>
+        <h1> Site XYZ</h1>
+        <nav>
+            <a href="#">LINK 1</a>
+            <a href="#">LINK 2</a>
+            <a href="#">LINK 3</a>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO -->
+    <!-- TAGs semanticas
+        nav
+        main
+        article - tecnicamente falando tem um peso maior (área de conteúdo independente)
+        blog, tem articles, são independentes. Exemplo: portal de notícias, loja virtual 
+        submarino cada produto não depende do outro.
+
+        section - 
+        footer    !-->
+    
+    <main>
+       <article id="coluna1">
+            <h2>UM</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam aspernatur reiciendis consequatur quidem dolor in atque natus earum voluptatem, similique autem praesentium hic porro quis a quos delectus! Quia, quod. Cumque eveniet totam omnis in quos recusandae dolorem error assumenda, aut odit sint commodi reprehenderit eos laudantium excepturi velit iste!</p>
+       </article>
+
+       <article id="coluna2">
+            <h2>DOIS</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam aspernatur reiciendis consequatur quidem dolor in atque natus earum voluptatem, similique autem praesentium hic porro quis a quos delectus! Quia, quod. Cumque eveniet totam omnis in quos recusandae dolorem error assumenda, aut odit sint commodi reprehenderit eos laudantium excepturi velit iste!</p>
+       </article>
+
+       <article id="coluna3">
+            <h2>TRÊS</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam aspernatur reiciendis consequatur quidem dolor in atque natus earum voluptatem, similique autem praesentium hic porro quis a quos delectus! Quia, quod. Cumque eveniet totam omnis in quos recusandae dolorem error assumenda, aut odit sint commodi reprehenderit eos laudantium excepturi velit iste!</p>
+       </article>
+    </main>
+
+
+  <!-- RODAPÉ -->
+    <footer>
+            <p>Layout de Exemplo</p>
+    </footer>
+</div>   
+</body>
+</html>
